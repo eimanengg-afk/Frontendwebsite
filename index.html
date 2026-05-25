@@ -6,9 +6,13 @@
 <title>Eiman Engineering Corp — Engineering &amp; Project Delivery in Pakistan, GCC &amp; MENA</title>
 <meta name="description" content="Independent engineering and project delivery company based in Lahore, Pakistan, operating since 2001. Pressure vessel design, procurement, fabrication and project management to ASME, API and ASTM standards. Serving Pakistan, GCC and MENA." />
 <meta name="theme-color" content="#0C2340" />
+<!-- Preload hero image so LCP element is fetched as early as possible -->
+<link rel="preload" as="image" href="images/hero/haradh-hero.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Load fonts asynchronously to prevent render-blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ========================================
    DESIGN TOKENS
@@ -1311,7 +1315,7 @@ footer {
   padding-bottom: 2px;
 }
 .foot-brand .desc { color: var(--char-500); max-width: 340px; font-size: 13px; line-height: 1.65; }
-.footer-col h4 {
+.footer-col h3 {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1653,7 +1657,7 @@ body.lightbox-locked { overflow: hidden; }
 <header class="site">
   <nav class="nav">
     <a href="#home" class="brand">
-      <img src="images/logos/eiman.png" alt="Eiman Engineering Corp" class="logo-mark">
+      <img src="images/logos/eiman.png" alt="" class="logo-mark" width="360" height="287">
       <span class="text-block">
         <span class="tag">Senior Engineering – Lean Execution</span>
         <span class="mark">Eiman Engineering Corp</span>
@@ -1677,7 +1681,7 @@ body.lightbox-locked { overflow: hidden; }
 <aside class="drawer" id="drawer" aria-label="Mobile navigation">
   <div class="drawer-top">
     <span class="brand">
-      <img src="images/logos/eiman.png" alt="" class="logo-mark">
+      <img src="images/logos/eiman.png" alt="" class="logo-mark" width="360" height="287">
       <span class="text-block"><span class="mark">Eiman Engineering Corp</span></span>
     </span>
     <button class="drawer-close" aria-label="Close menu" onclick="document.getElementById('drawer').classList.remove('open')">×</button>
@@ -1697,7 +1701,7 @@ body.lightbox-locked { overflow: hidden; }
 <!-- ============ HERO ============ -->
 <section class="hero" id="home">
   <div class="hero-photo">
-    <img src="images/hero/haradh-hero.png" alt="Fabricated structural steel bundles for Saudi Aramco Haradh Gas Field at Descon Engineering Works, Lahore, 2001">
+    <img src="images/hero/haradh-hero.png" alt="Fabricated structural steel bundles for Saudi Aramco Haradh Gas Field at Descon Engineering Works, Lahore, 2001" width="1200" height="930">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-grain"></div>
@@ -1772,29 +1776,29 @@ body.lightbox-locked { overflow: hidden; }
     </div>
     <div class="logo-strip">
       <!-- Row 1: National operators -->
-      <div class="logo-cell"><img src="images/logos/ogdcl.png" alt="OGDCL"></div>
-      <div class="logo-cell"><img src="images/logos/ppl.png" alt="Pakistan Petroleum Limited"></div>
-      <div class="logo-cell"><img src="images/logos/nrl.png" alt="National Refinery Limited"></div>
-      <div class="logo-cell"><img src="images/logos/bhp-billiton.png" alt="BHP Billiton"></div>
-      <div class="logo-cell"><img src="images/logos/ffc.png" alt="Fauji Fertilizer Company"></div>
-      <div class="logo-cell"><img src="images/logos/lotte.png" alt="Lotte Chemical Pakistan" class="wide"></div>
-      <div class="logo-cell"><img src="images/logos/lucky-core.png" alt="Lucky Core Industries"></div>
+      <div class="logo-cell"><img src="images/logos/ogdcl.png" alt="OGDCL" width="148" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/ppl.png" alt="Pakistan Petroleum Limited" width="230" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/nrl.png" alt="National Refinery Limited" width="148" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/bhp-billiton.png" alt="BHP Billiton" width="154" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/ffc.png" alt="Fauji Fertilizer Company" width="225" height="135"></div>
+      <div class="logo-cell"><img src="images/logos/lotte.png" alt="Lotte Chemical Pakistan" class="wide" width="1240" height="120"></div>
+      <div class="logo-cell"><img src="images/logos/lucky-core.png" alt="Lucky Core Industries" width="200" height="132"></div>
       <!-- Row 2: EPC principals & engineering partners -->
-      <div class="logo-cell"><img src="images/logos/gea.png" alt="GEA"></div>
-      <div class="logo-cell"><img src="images/logos/emerson.png" alt="Emerson"></div>
-      <div class="logo-cell"><img src="images/logos/ddfc.png" alt="DDFC Innovative Engineering Solutions"></div>
-      <div class="logo-cell"><img src="images/logos/descon.png" alt="Descon Engineering"></div>
-      <div class="logo-cell"><img src="images/logos/haroon.png" alt="Haroon Engineering"></div>
-      <div class="logo-cell"><img src="images/logos/al-habib.png" alt="Al-Habib Engineering"></div>
-      <div class="logo-cell"><img src="images/logos/ekl.png" alt="Engineering Kinetics Limited" class="wide"></div>
+      <div class="logo-cell"><img src="images/logos/gea.png" alt="GEA" width="247" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/emerson.png" alt="Emerson" width="169" height="148"></div>
+      <div class="logo-cell"><img src="images/logos/ddfc.png" alt="DDFC Innovative Engineering Solutions" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/descon.png" alt="Descon Engineering" width="204" height="192"></div>
+      <div class="logo-cell"><img src="images/logos/haroon.png" alt="Haroon Engineering" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/al-habib.png" alt="Al-Habib Engineering" width="204" height="192"></div>
+      <div class="logo-cell"><img src="images/logos/ekl.png" alt="Engineering Kinetics Limited" class="wide" width="242" height="77"></div>
       <!-- Row 3: Fabrication, materials & international steel mills -->
-      <div class="logo-cell"><img src="images/logos/matrix.png" alt="Matrix"></div>
-      <div class="logo-cell"><img src="images/logos/crescent-steel.png" alt="Crescent Steel and Allied Products"></div>
-      <div class="logo-cell"><img src="images/logos/schreier-metall.png" alt="Schreier Metall, Germany"></div>
-      <div class="logo-cell"><img src="images/logos/van-leeuwen.png" alt="Van Leeuwen Pipe and Tube, Singapore"></div>
-      <div class="logo-cell"><img src="images/logos/ingo-schroeder.png" alt="Ingo Schroeder Export, Germany"></div>
-      <div class="logo-cell"><img src="images/logos/inox-tek.png" alt="Inox-Tek, Taiwan"></div>
-      <div class="logo-cell"><img src="images/logos/changshu-walsin.png" alt="Changshu Walsin Specialty Steel, China" class="wide"></div>
+      <div class="logo-cell"><img src="images/logos/matrix.png" alt="Matrix" width="204" height="192"></div>
+      <div class="logo-cell"><img src="images/logos/crescent-steel.png" alt="Crescent Steel and Allied Products" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/schreier-metall.png" alt="Schreier Metall, Germany" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/van-leeuwen.png" alt="Van Leeuwen Pipe and Tube, Singapore" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/ingo-schroeder.png" alt="Ingo Schroeder Export, Germany" width="287" height="160"></div>
+      <div class="logo-cell"><img src="images/logos/inox-tek.png" alt="Inox-Tek, Taiwan" width="200" height="188"></div>
+      <div class="logo-cell"><img src="images/logos/changshu-walsin.png" alt="Changshu Walsin Specialty Steel, China" class="wide" width="820" height="179"></div>
     </div>
   </div>
 </section>
@@ -1829,7 +1833,7 @@ body.lightbox-locked { overflow: hidden; }
 
     <aside class="founder">
       <div class="founder-photo">
-        <img src="images/founder/portrait.png" alt="Muhammad Zahid Siddiqui, Founder and Principal Engineer">
+        <img src="images/founder/portrait.png" alt="Muhammad Zahid Siddiqui, Founder and Principal Engineer" width="1086" height="1448">
       </div>
       <div class="founder-name">Muhammad Zahid Siddiqui</div>
       <div class="founder-role">Founder &amp; Principal Engineer</div>
@@ -2088,7 +2092,7 @@ body.lightbox-locked { overflow: hidden; }
       </div>
       <div class="project-visual">
         <div class="main-img">
-          <img src="images/projects/haradh-steel-bundles.png" alt="Packed bundles of fabricated structural steel ready for dispatch from Descon Engineering Works for Saudi Aramco Haradh Gas Field">
+          <img src="images/projects/haradh-steel-bundles.png" alt="Packed bundles of fabricated structural steel ready for dispatch from Descon Engineering Works for Saudi Aramco Haradh Gas Field" width="1200" height="930">
         </div>
         <div class="img-caption">Packed bundles of fabricated steel structures for Haradh Gas Field, ready to be picked up from Descon Engineering Works.</div>
       </div>
@@ -2144,13 +2148,13 @@ body.lightbox-locked { overflow: hidden; }
       </div>
       <div class="project-visual">
         <div class="main-img">
-          <img src="images/projects/kiln-gas-knockout-drum.png" alt="Kiln Gas Knockout Drum in A 516 Gr. 70 carbon steel, finished and ready for despatch">
+          <img src="images/projects/kiln-gas-knockout-drum.png" alt="Kiln Gas Knockout Drum in A 516 Gr. 70 carbon steel, finished and ready for despatch" width="900" height="615">
         </div>
         <div class="img-caption">Kiln Gas Knockout Drum in A 516 Gr. 70 carbon steel — finished and ready for despatch.</div>
         <div class="project-thumbs">
-          <div class="thumb"><img src="images/projects/tube-bundle-air-heater.png" alt="SS 304 tube bundle for air heater during fabrication"></div>
-          <div class="thumb"><img src="images/projects/air-heater.png" alt="Air heater fabricated in SS 304 for soda ash drying"></div>
-          <div class="thumb"><img src="images/projects/vacuum-engine.png" alt="Rotary lobe vacuum engine procured for chemical service"></div>
+          <div class="thumb"><img src="images/projects/tube-bundle-air-heater.png" alt="SS 304 tube bundle for air heater during fabrication" width="900" height="861"></div>
+          <div class="thumb"><img src="images/projects/air-heater.png" alt="Air heater fabricated in SS 304 for soda ash drying" width="900" height="1104"></div>
+          <div class="thumb"><img src="images/projects/vacuum-engine.png" alt="Rotary lobe vacuum engine procured for chemical service" width="900" height="667"></div>
         </div>
       </div>
     </div>
@@ -2173,13 +2177,13 @@ body.lightbox-locked { overflow: hidden; }
       </div>
       <div class="project-visual">
         <div class="main-img">
-          <img src="images/projects/astm-a106-pipe.png" alt="ASTM A 106 seamless carbon steel pipes with protective blue end caps, bundled and ready for despatch">
+          <img src="images/projects/astm-a106-pipe.png" alt="ASTM A 106 seamless carbon steel pipes with protective blue end caps, bundled and ready for despatch" width="900" height="660">
         </div>
         <div class="img-caption">ASTM A 106 seamless carbon-steel pipes with protective end caps, bundled for routing through Karachi Port.</div>
         <div class="project-thumbs">
-          <div class="thumb"><img src="images/projects/third-party-inspection.png" alt="Third-party inspection tag attached to pipe stock — DN 1.5 inch SCH 160"></div>
-          <div class="thumb"><img src="images/projects/socket-weld-fittings.png" alt="Forged socket-weld fittings packed for shipment"></div>
-          <div class="thumb"><img src="images/projects/finned-tubes.jpg" alt="Finned tubes for air heater ready for shipment to Pakistan, 2014"></div>
+          <div class="thumb"><img src="images/projects/third-party-inspection.png" alt="Third-party inspection tag attached to pipe stock — DN 1.5 inch SCH 160" width="900" height="675"></div>
+          <div class="thumb"><img src="images/projects/socket-weld-fittings.png" alt="Forged socket-weld fittings packed for shipment" width="900" height="682"></div>
+          <div class="thumb"><img src="images/projects/finned-tubes.jpg" alt="Finned tubes for air heater ready for shipment to Pakistan, 2014" width="1400" height="1049"></div>
         </div>
       </div>
     </div>
@@ -2202,14 +2206,14 @@ body.lightbox-locked { overflow: hidden; }
       </div>
       <div class="project-visual">
         <div class="main-img">
-          <img src="images/projects/crude-storage-tank.png" alt="5,000 barrel crude oil storage tank at OGDCL Dhakni with distinctive camouflage paint scheme">
+          <img src="images/projects/crude-storage-tank.png" alt="5,000 barrel crude oil storage tank at OGDCL Dhakni with distinctive camouflage paint scheme" width="900" height="878">
         </div>
         <div class="img-caption">5,000 barrel crude oil storage tank · OGDCL Dhakni.</div>
         <div class="project-thumbs four">
-          <div class="thumb"><img src="images/projects/gas-scrubbers.png" alt="Twin gas scrubber skids for Bettani Gasfield — joint venture with Haroon Engineering Company"></div>
-          <div class="thumb"><img src="images/projects/ss-316l-reactor.png" alt="SS 316L limpet-coil reactor under fabrication for a European specialty chemicals manufacturer"></div>
-          <div class="thumb"><img src="images/projects/dishheads-forming.png" alt="Steel dishheads under hydraulic press forming for Crescent Steel"></div>
-          <div class="thumb"><img src="images/projects/lucky-core-knockout-internals.png" alt="SS 304 internals of the repeat Knockout Vessel order for Lucky Core Industries"></div>
+          <div class="thumb"><img src="images/projects/gas-scrubbers.png" alt="Twin gas scrubber skids for Bettani Gasfield — joint venture with Haroon Engineering Company" width="900" height="674"></div>
+          <div class="thumb"><img src="images/projects/ss-316l-reactor.png" alt="SS 316L limpet-coil reactor under fabrication for a European specialty chemicals manufacturer" width="700" height="933"></div>
+          <div class="thumb"><img src="images/projects/dishheads-forming.png" alt="Steel dishheads under hydraulic press forming for Crescent Steel" width="960" height="1280"></div>
+          <div class="thumb"><img src="images/projects/lucky-core-knockout-internals.png" alt="SS 304 internals of the repeat Knockout Vessel order for Lucky Core Industries" width="960" height="1280"></div>
         </div>
       </div>
     </div>
@@ -2298,13 +2302,13 @@ body.lightbox-locked { overflow: hidden; }
     <div class="footer-top">
       <div class="foot-brand">
         <div class="footer-brand-line">
-          <img src="images/logos/eiman.png" alt="Eiman Engineering Corp">
+          <img src="images/logos/eiman.png" alt="" width="360" height="287">
           <span class="mark">Eiman Engineering Corp</span>
         </div>
         <p class="desc">Independent engineering and project delivery across Pakistan, GCC and internationally since 2001. International standards. Regional cost base. Senior accountability.</p>
       </div>
       <div class="footer-col">
-        <h4>Navigate</h4>
+        <h3>Navigate</h3>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -2315,7 +2319,7 @@ body.lightbox-locked { overflow: hidden; }
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="#services">Engineering Design</a></li>
           <li><a href="#services">Supply Chain</a></li>
@@ -2325,7 +2329,7 @@ body.lightbox-locked { overflow: hidden; }
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+923008410639">+92 300 8410639</a></li>
           <li><a href="https://wa.me/923008410639" target="_blank" rel="noopener">WhatsApp</a></li>
