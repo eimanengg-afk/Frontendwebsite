@@ -2251,22 +2251,22 @@ body.lightbox-locked { overflow: hidden; }
       </div>
     </div>
 
-    <form class="contact-form" autocomplete="on">
+    <form class="contact-form" id="contact-form" autocomplete="on">
       <div class="form-title">Enquire about a project</div>
       <div class="form-sub">We typically respond within one working day. For urgent matters, please use WhatsApp or telephone.</div>
 
       <div class="form-row">
-        <div class="field"><label for="f-name">Full Name *</label><input id="f-name" type="text" required placeholder="Your full name"></div>
-        <div class="field"><label for="f-org">Organisation *</label><input id="f-org" type="text" required placeholder="Company"></div>
+        <div class="field"><label for="f-name">Full Name *</label><input id="f-name" name="name" type="text" required placeholder="Your full name"></div>
+        <div class="field"><label for="f-org">Organisation *</label><input id="f-org" name="organisation" type="text" required placeholder="Company"></div>
       </div>
       <div class="form-row">
-        <div class="field"><label for="f-email">Email *</label><input id="f-email" type="email" required placeholder="name@company.com"></div>
-        <div class="field"><label for="f-phone">Telephone</label><input id="f-phone" type="tel" placeholder="+92 …"></div>
+        <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required placeholder="name@company.com"></div>
+        <div class="field"><label for="f-phone">Telephone</label><input id="f-phone" name="telephone" type="tel" placeholder="+92 …"></div>
       </div>
       <div class="form-row">
         <div class="field">
           <label for="f-country">Country</label>
-          <select id="f-country">
+          <select id="f-country" name="country">
             <option>Pakistan</option><option>Saudi Arabia</option><option>UAE</option>
             <option>Bahrain</option><option>Kuwait</option><option>Qatar</option>
             <option>Oman</option><option>Other</option>
@@ -2274,7 +2274,7 @@ body.lightbox-locked { overflow: hidden; }
         </div>
         <div class="field">
           <label for="f-service">Service Required</label>
-          <select id="f-service">
+          <select id="f-service" name="service">
             <option>Engineering Design</option>
             <option>Supply Chain &amp; Procurement</option>
             <option>Fabrication of Equipment &amp; Steel Structures</option>
@@ -2285,9 +2285,10 @@ body.lightbox-locked { overflow: hidden; }
         </div>
       </div>
       <div class="form-row single">
-        <div class="field"><label for="f-msg">Message *</label><textarea id="f-msg" required placeholder="Tell us about your project — scope, location, timeline."></textarea></div>
+        <div class="field"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required placeholder="Tell us about your project — scope, location, timeline."></textarea></div>
       </div>
-      <button type="submit" class="form-submit">Submit Enquiry →</button>
+      <button type="submit" class="form-submit" id="form-submit-btn">Submit Enquiry →</button>
+      <div id="form-status" style="margin-top:16px;font-size:14px;display:none;"></div>
     </form>
   </div>
 </section>
@@ -2461,6 +2462,49 @@ body.lightbox-locked { overflow: hidden; }
   }, { passive: true });
 
   buildGroups();
+})();
+</script>
+
+<script>
+(function () {
+  var FORMSPREE_ID = 'xaqkkrqe';
+
+  var form   = document.getElementById('contact-form');
+  var btn    = document.getElementById('form-submit-btn');
+  var status = document.getElementById('form-status');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.style.display = 'none';
+
+    fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+    .then(function (result) {
+      if (result.ok) {
+        status.style.cssText = 'margin-top:16px;font-size:14px;color:#2a7f4f;display:block;';
+        status.textContent = 'Thank you — your enquiry has been sent. We will be in touch within one working day.';
+        form.reset();
+        btn.textContent = 'Submit Enquiry →';
+        btn.disabled = false;
+      } else {
+        throw new Error((result.data.errors || []).map(function (err) { return err.message; }).join(', ') || 'Submission failed');
+      }
+    })
+    .catch(function (err) {
+      status.style.cssText = 'margin-top:16px;font-size:14px;color:#b94a48;display:block;';
+      status.textContent = 'Sorry, there was a problem sending your message. Please email us directly at info@eimanengg.com';
+      btn.textContent = 'Submit Enquiry →';
+      btn.disabled = false;
+    });
+  });
 })();
 </script>
 
